@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatrapatiAI</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #111;
+        }
+
+        /* Top Bar */
+        .top {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo img {
+            height: 32px;
+            width: 32px;
+        }
+
+        /* Center Area */
+        .center {
+            height: calc(100vh - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 420px;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .card h1 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .output {
+            margin-top: 20px;
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 15px;
+            white-space: pre-line;
+        }
+
+        .footer {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top">
+    <div class="logo">
+        <!-- logo.png ko project root ya static folder me rakho -->
+        <img src="static/logo.png" alt="Logo">
+        ChatrapatiAI
+    </div>
+</div>
+
+<!-- CENTER -->
+<div class="center">
+    <div class="card">
+        <h1>Try Script AI</h1>
+        <p>Enter a topic and get an instant reel script</p>
+
+        <form method="POST">
+            <input name="topic" placeholder="e.g. motivation, fitness, ai" required>
+            <button type="submit">Generate Script</button>
+        </form>
+
+        {% if script %}
+        <div class="output">
+            {{ script }}
+        </div>
+        {% endif %}
+
+        <div class="footer">
+            Built in India 🇮🇳
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
