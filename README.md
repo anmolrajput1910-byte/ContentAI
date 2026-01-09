@@ -1,2 +1,12 @@
-# ContentAI
-ContentAI is a lightweight Indian AI tool that generates scripts for content creators using a custom-trained small language model.
+ChatrapatiAI 🚀
+
+ChatrapatiAI is a lightweight Indian AI tool that helps content creators
+generate motivational and informative scripts instantly using a small
+custom-trained language model.
+
+Built with:
+- Python
+- PyTorch
+- Flask
+
+Status: Public Beta
